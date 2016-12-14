@@ -1,0 +1,109 @@
+<html><head>
+<meta charset="utf-8">
+<meta content="stuff, to, help, search, engines, not" name="keywords">
+<meta content="What this page is about." name="description">
+<meta content="Display Webcam Stream" name="title">
+<title>Display Webcam Stream</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+  
+<body background="NEW.png" class="o">
+
+ 
+
+<script>
+
+var video = document.querySelector("#videoElement");
+
+navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
+
+if (navigator.getUserMedia) {       
+	navigator.getUserMedia({video: true}, handleVideo, videoError);
+}
+
+function handleVideo(stream) {
+	video.src = window.URL.createObjectURL(stream);
+}
+function videoError(e) {
+alert('An error occured while video loading. Plese refresh the page.')
+}
+</script>
+
+
+<div id="container" class="wrapper">
+    <video autoplay="true" id="videoElement" src="blob:https://zitroagario.github.io/6ff3575f-c41b-4f4d-88a5-cdc9fef7fd77">
+     
+    </video>
+  </div></body></html>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  body.o {/* background: linear-gradient(270deg, #ff0000, #ffb900, #fffd00, #7aff00, #61ffad, #0adb8a, #00fff7, #0075ff, #0008ff, #8000ff, #b800ff, #fc00ff, #ff00ce, #ff0046); *//* background-size: 2800% 2800%; */-webkit-animation: DaAnimation 60s ease infinite;-moz-animation: DaAnimation 60s ease infinite;-o-animation: DaAnimation 60s ease infinite;/* animation: DaAnimation 60s ease infinite; */opacity: 0.5;}
+
+div.wrapper#container{
+    background: url("NEW.png") z-index="9999999" ;
+/*  opacity: 0.5;
+    width: 100%;
+    height: 100% */
+    margin: 0px auto;
+    width: 500px;
+    height: 375px;
+    border: 10px #333 solid;
+
+}
+video{
+  opacity: 1;
+}
+
+@-webkit-keyframes DaAnimation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes DaAnimation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-o-keyframes DaAnimation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes DaAnimation { 
+    0%{/* background-position:0% 50% */}
+    50%{/* background-position:100% 50% */}
+    100%{/* background-position:0% 50% */}
+    }
+
+
+#videoElement {
+    width: 500px;
+    height: 375px;
+    background-color: #666;
+}
